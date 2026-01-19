@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AI Chatbot tích hợp ERP – Trợ lý điều hành doanh nghiệp. Hỏi số liệu, xem báo cáo, nhận cảnh báo chỉ bằng hội thoại.">
+    <meta name="keywords" content="AI Chatbot, ERP, Trợ lý điều hành, Báo cáo tự động, Phân tích dữ liệu">
+    <meta name="author" content="AI ERP Solutions">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Chatbot tích hợp ERP – Trợ lý điều hành doanh nghiệp">
+    <meta property="og:description"
+        content="Không cần mở phần mềm ERP. Không chờ kế toán hay IT. Chỉ cần hỏi – AI sẽ trả lời.">
+    <meta property="og:type" content="website">
+
+    <title>AI Chatbot tích hợp ERP – Trợ lý điều hành doanh nghiệp</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <span>AI ERP</span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="#solution" class="nav-link">Giải pháp</a></li>
+                <li><a href="#how-it-works" class="nav-link">Cách hoạt động</a></li>
+                <li><a href="#features" class="nav-link">Tính năng</a></li>
+                <li><a href="#pricing" class="nav-link">Bảng giá</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="#demo" class="btn btn-secondary">Xem demo</a>
+                <a href="#contact" class="btn btn-primary">Nhận tư vấn</a>
+            </div>
+
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-sparkles"></i>
+                    <span>Powered by AI</span>
+                </div>
+
+                <h1 class="hero-title">
+                    Trợ lý AI cho ERP – <span class="text-gradient">Hỏi số liệu, xem báo cáo, nhận cảnh báo</span> chỉ
+                    bằng hội thoại
+                </h1>
+
+                <p class="hero-subtitle">
+                    Không cần mở phần mềm ERP. Không chờ kế toán hay IT.<br>
+                    Chỉ cần hỏi – AI sẽ trả lời dựa trên dữ liệu doanh nghiệp của bạn.
+                </p>
+
+                <div class="hero-cta btn-group">
+                    <a href="#demo" class="btn btn-primary">
+                        <i class="fas fa-play-circle"></i>
+                        Xem demo
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-comments"></i>
+                        Nhận tư vấn
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number"><span>500+</span></div>
+                        <div class="stat-label">Doanh nghiệp tin dùng</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number"><span>2M+</span></div>
+                        <div class="stat-label">Truy vấn mỗi tháng</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number"><span>98%</span></div>
+                        <div class="stat-label">Độ chính xác</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-glow"></div>
+                <img src="assets/hero-robot.png" alt="AI Robot trợ lý ERP" class="hero-image" id="heroImage" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROBLEM SECTION ==================== -->
+    <section class="problem-section" id="problem">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Thách thức</span>
+                </div>
+                <h2 class="section-title">Doanh nghiệp bạn đang gặp vấn đề này?</h2>
+                <p class="section-subtitle">
+                    Những thách thức quen thuộc mà lãnh đạo doanh nghiệp đang phải đối mặt mỗi ngày
+                </p>
+            </div>
+
+            <div class="problem-grid">
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <h4>Chờ đợi báo cáo quá lâu</h4>
+                    <p>Mỗi lần cần báo cáo phải chờ kế toán tổng hợp, mất hàng giờ thậm chí hàng ngày.</p>
+                </div>
+
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>Không có số liệu thời gian thực</h4>
+                    <p>Lãnh đạo không nắm được số liệu theo thời gian thực, quyết định dựa trên dữ liệu cũ.</p>
+                </div>
+
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h4>Sai sót do thủ công</h4>
+                    <p>Sai sót do nhập liệu thủ công, export Excel rồi lại tổng hợp qua nhiều bước.</p>
+                </div>
+
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4>Dữ liệu không khai thác được</h4>
+                    <p>Dữ liệu có đầy đủ trong ERP nhưng không ai biết cách khai thác hiệu quả.</p>
+                </div>
+
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+                    <h4>Thiếu cảnh báo sớm</h4>
+                    <p>Không có cảnh báo sớm rủi ro tài chính, tồn kho, dòng tiền cho đến khi quá muộn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SOLUTION SECTION ==================== -->
+    <section class="solution-section" id="solution">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Giải pháp</span>
+                </div>
+                <h2 class="section-title">AI ERP giúp doanh nghiệp vận hành và ra quyết định tốt hơn</h2>
+                <p class="section-subtitle">
+                    Biến dữ liệu ERP thành insight hành động – chỉ bằng hội thoại tự nhiên
+                </p>
+            </div>
+
+            <div class="solution-content">
+                <div class="solution-visual">
+                    <img src="assets/solution-analytics.png" alt="AI Analytics Dashboard" class="solution-image"
+                        id="solutionImage" />
+                </div>
+
+                <div class="solution-list">
+                    <div class="solution-item animate-on-scroll">
+                        <div class="solution-item-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="solution-item-content">
+                            <h4>Tra cứu bằng hội thoại</h4>
+                            <p>Tra cứu tồn kho, công nợ, đơn hàng chỉ bằng câu hỏi tự nhiên</p>
+                        </div>
+                    </div>
+
+                    <div class="solution-item animate-on-scroll">
+                        <div class="solution-item-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="solution-item-content">
+                            <h4>Sinh báo cáo tự động</h4>
+                            <p>Báo cáo tự động theo ngày / tuần / tháng, xuất PDF/Excel</p>
+                        </div>
+                    </div>
+
+                    <div class="solution-item animate-on-scroll">
+                        <div class="solution-item-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div class="solution-item-content">
+                            <h4>Dashboard theo vai trò</h4>
+                            <p>Hiển thị dashboard tùy chỉnh theo từng vị trí quản lý</p>
+                        </div>
+                    </div>
+
+                    <div class="solution-item animate-on-scroll">
+                        <div class="solution-item-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="solution-item-content">
+                            <h4>Phân tích KPI tài chính</h4>
+                            <p>Phân tích chi tiết các chỉ số KPI tài chính quan trọng</p>
+                        </div>
+                    </div>
+
+                    <div class="solution-item animate-on-scroll">
+                        <div class="solution-item-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="solution-item-content">
+                            <h4>Cảnh báo rủi ro sớm</h4>
+                            <p>Nhận thông báo kịp thời về các rủi ro tiềm ẩn</p>
+                        </div>
+                    </div>
+
+                    <div class="solution-item animate-on-scroll">
+                        <div class="solution-item-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="solution-item-content">
+                            <h4>Dự đoán xu hướng</h4>
+                            <p>Dự đoán xu hướng doanh thu – chi phí (theo gói)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== HOW IT WORKS ==================== -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-cogs"></i>
+                    <span>Quy trình</span>
+                </div>
+                <h2 class="section-title">Cách AI ERP hoạt động</h2>
+                <p class="section-subtitle">
+                    Chỉ 3 bước đơn giản để bắt đầu sử dụng trợ lý AI cho doanh nghiệp
+                </p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <h4>Kết nối ERP</h4>
+                    <p>Kết nối với hệ thống ERP hiện tại của doanh nghiệp một cách an toàn và bảo mật</p>
+                </div>
+
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <h4>AI Đọc & Hiểu dữ liệu</h4>
+                    <p>AI đọc và hiểu dữ liệu theo quyền người dùng, đảm bảo phân quyền chính xác</p>
+                </div>
+
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <h4>Hỏi & Nhận kết quả</h4>
+                    <p>Người dùng hỏi – AI trả lời – sinh báo cáo – gửi cảnh báo tự động</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURES BY ROLE ==================== -->
+    <section class="features-role" id="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-users"></i>
+                    <span>Tính năng</span>
+                </div>
+                <h2 class="section-title">Tính năng theo vai trò</h2>
+                <p class="section-subtitle">
+                    Mỗi vai trò có những tính năng riêng biệt, tối ưu cho nhu cầu công việc
+                </p>
+            </div>
+
+            <div class="role-tabs">
+                <button class="role-tab active" data-role="ceo">
+                    <i class="fas fa-crown"></i> CEO
+                </button>
+                <button class="role-tab" data-role="cfo">
+                    <i class="fas fa-calculator"></i> CFO / Kế toán trưởng
+                </button>
+                <button class="role-tab" data-role="manager">
+                    <i class="fas fa-user-tie"></i> Quản lý
+                </button>
+            </div>
+
+            <!-- CEO Content -->
+            <div class="role-content active" id="ceo">
+                <div class="role-features">
+                    <div class="role-feature-card animate-on-scroll">
+                        <div class="role-feature-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4>Tổng quan Doanh thu – Chi phí – Lợi nhuận</h4>
+                        <p>Xem nhanh bức tranh tài chính tổng thể của doanh nghiệp theo thời gian thực</p>
+                    </div>
+
+                    <div class="role-feature-card animate-on-scroll">
+                        <div class="role-feature-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <h4>Cảnh báo rủi ro</h4>
+                        <p>Nhận thông báo ngay khi có dấu hiệu bất thường về tài chính, dòng tiền, hoặc vận hành</p>
+                    </div>
+
+                    <div class="role-feature-card animate-on-scroll">
+                        <div class="role-feature-icon">
+                            <i class="fas fa-crystal-ball"></i>
+                        </div>
+                        <h4>Dự báo xu hướng</h4>
+                        <p>AI phân tích và dự báo xu hướng doanh thu, chi phí trong các kỳ tới</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CFO Content -->
+            <div class="role-content" id="cfo">
+                <div class="role-features">
+                    <div class="role-feature-card animate-on-scroll">
+                        <div class="role-feature-icon">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <h4>Công nợ</h4>
+                        <p>Theo dõi chi tiết công nợ phải thu, phải trả theo khách hàng, nhà cung cấp</p>
+                    </div>
+
+                    <div class="role-feature-card animate-on-scroll">
+                        <div class="role-feature-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h4>Dòng tiền</h4>
+                        <p>Phân tích dòng tiền vào ra, dự báo vị thế tiền mặt trong các kỳ tới</p>
+                    </div>
+
+                    <div class="role-feature-card animate-on-scroll">
+                        <div class="role-feature-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h4>Báo cáo tài chính</h4>
+                        <p>Tự động sinh báo cáo tài chính: Bảng cân đối, Kết quả kinh doanh, Lưu chuyển tiền</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manager Content -->
+            <div class="role-content" id="manager">
+                <div class="role-features">
+                    <div class="role-feature-card animate-on-scroll">
+                        <div class="role-feature-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h4>KPI phòng ban</h4>
+                        <p>Theo dõi các chỉ số KPI của phòng ban, so sánh với mục tiêu đề ra</p>
+                    </div>
+
+                    <div class="role-feature-card animate-on-scroll">
+                        <div class="role-feature-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h4>Hiệu suất vận hành</h4>
+                        <p>Phân tích hiệu suất hoạt động, tìm ra điểm nghẽn và cơ hội cải tiến</p>
+                    </div>
+
+                    <div class="role-feature-card animate-on-scroll">
+                        <div class="role-feature-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h4>Quản lý đội nhóm</h4>
+                        <p>Xem báo cáo công việc, tiến độ dự án và hiệu suất nhân viên</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PRICING SECTION ==================== -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-tags"></i>
+                    <span>Bảng giá</span>
+                </div>
+                <h2 class="section-title">Bảng giá Chatbot tích hợp ERP</h2>
+                <p class="section-subtitle">
+                    Chọn gói phù hợp với quy mô và nhu cầu doanh nghiệp của bạn
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Starter -->
+                <div class="pricing-card animate-on-scroll">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Gói Starter</h3>
+                        <p class="pricing-setup">Phí setup: <span>3–5 triệu</span> (1 lần)</p>
+                        <div class="pricing-price">
+                            <span class="pricing-amount">790.000đ</span>
+                            <span class="pricing-period">/ tháng</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>2.000 lượt trao đổi AI / tháng</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>3–5 người dùng nội bộ</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Tra cứu ERP: Cơ bản</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Lịch sử chat: 30 ngày</span>
+                        </div>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="#contact" class="btn btn-outline">Bắt đầu ngay</a>
+                    </div>
+                </div>
+
+                <!-- Professional -->
+                <div class="pricing-card featured animate-on-scroll">
+                    <div class="pricing-badge">Phổ biến nhất</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Gói Professional</h3>
+                        <p class="pricing-setup">Phí setup: <span>8–15 triệu</span></p>
+                        <div class="pricing-price">
+                            <span class="pricing-amount">1.990.000đ</span>
+                            <span class="pricing-period">/ tháng</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>8.000 lượt trao đổi AI / tháng</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>10–25 người dùng nội bộ</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Tra cứu ERP: Đầy đủ</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Sinh báo cáo PDF/Excel: Ngày / tuần</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Dashboard: Cơ bản</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Lịch sử chat: 90 ngày</span>
+                        </div>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="#contact" class="btn btn-primary">Bắt đầu ngay</a>
+                    </div>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="pricing-card animate-on-scroll">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Gói Enterprise</h3>
+                        <p class="pricing-setup">Phí setup: <span>25–50 triệu</span></p>
+                        <div class="pricing-price">
+                            <span class="pricing-amount">4.900.000đ</span>
+                            <span class="pricing-period">/ tháng</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>25.000 lượt trao đổi AI / tháng</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>50+ người dùng nội bộ</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Phân tích xu hướng</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>KPI chuyên sâu</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Cảnh báo rủi ro</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Dashboard nâng cao</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Lịch sử chat: 1 năm</span>
+                        </div>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="#contact" class="btn btn-outline">Liên hệ</a>
+                    </div>
+                </div>
+
+                <!-- Custom Enterprise -->
+                <div class="pricing-card animate-on-scroll">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Doanh nghiệp lớn</h3>
+                        <p class="pricing-setup">Phí setup: <span>Theo dự án</span></p>
+                        <div class="pricing-price">
+                            <span class="pricing-amount">Báo giá riêng</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Không giới hạn lượt trao đổi</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Không giới hạn người dùng</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Phân quyền nâng cao</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>AI dự báo & gợi ý hành động</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Tích hợp API tùy chỉnh</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Hỗ trợ 24/7 ưu tiên</span>
+                        </div>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="#contact" class="btn btn-outline">Liên hệ tư vấn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ADD-ON SECTION ==================== -->
+    <section class="addon-section" id="addon">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <span>Tiện ích bổ sung</span>
+                </div>
+                <h2 class="section-title">Nâng cấp thêm tính năng</h2>
+                <p class="section-subtitle">
+                    Mở rộng khả năng của AI ERP với các tiện ích bổ sung
+                </p>
+            </div>
+
+            <div class="addon-grid">
+                <div class="addon-card animate-on-scroll">
+                    <div class="addon-icon">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <div class="addon-content">
+                        <h4>Gửi báo cáo & cảnh báo tự động</h4>
+                        <p>Qua Email / Zalo / Telegram theo lịch định kỳ</p>
+                    </div>
+                </div>
+
+                <div class="addon-card animate-on-scroll">
+                    <div class="addon-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="addon-content">
+                        <h4>Thêm người dùng & phân quyền</h4>
+                        <p>Phân quyền chi tiết theo phòng ban, vai trò</p>
+                    </div>
+                </div>
+
+                <div class="addon-card animate-on-scroll">
+                    <div class="addon-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="addon-content">
+                        <h4>API / Webhook</h4>
+                        <p>Truy vấn dữ liệu thời gian thực qua API</p>
+                    </div>
+                </div>
+
+                <div class="addon-card animate-on-scroll">
+                    <div class="addon-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="addon-content">
+                        <h4>Template KPI theo ngành</h4>
+                        <p>Bộ KPI mẫu cho từng ngành nghề cụ thể</p>
+                    </div>
+                </div>
+
+                <div class="addon-card animate-on-scroll">
+                    <div class="addon-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <div class="addon-content">
+                        <h4>Lưu lịch sử chat dài hạn</h4>
+                        <p>Lưu trữ và tra cứu lịch sử chat không giới hạn</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TRUST SECTION ==================== -->
+    <section class="trust-section" id="trust">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Tin cậy</span>
+                </div>
+                <h2 class="section-title">Tại sao doanh nghiệp tin tưởng chúng tôi?</h2>
+            </div>
+
+            <div class="trust-grid">
+                <div class="trust-card animate-on-scroll">
+                    <div class="trust-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h4>Phù hợp doanh nghiệp đã dùng ERP</h4>
+                    <p>Tích hợp mượt mà với các hệ thống ERP phổ biến tại Việt Nam</p>
+                </div>
+
+                <div class="trust-card animate-on-scroll">
+                    <div class="trust-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h4>Dữ liệu phân quyền & audit log</h4>
+                    <p>Bảo mật dữ liệu với phân quyền chi tiết và lưu vết mọi thao tác</p>
+                </div>
+
+                <div class="trust-card animate-on-scroll">
+                    <div class="trust-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h4>Triển khai theo chuẩn doanh nghiệp</h4>
+                    <p>Quy trình triển khai chuyên nghiệp, hỗ trợ đào tạo toàn diện</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-content">
+                    <h2>Sẵn sàng nâng cấp cách điều hành doanh nghiệp?</h2>
+                    <p>Đặt lịch demo để trải nghiệm AI ERP ngay hôm nay</p>
+                    <div class="cta-buttons">
+                        <a href="#demo" class="btn btn-primary">
+                            <i class="fas fa-calendar-check"></i>
+                            Đặt lịch demo AI ERP
+                        </a>
+                        <a href="#contact-form" class="btn btn-secondary">
+                            <i class="fas fa-headset"></i>
+                            Nhận tư vấn giải pháp phù hợp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <span>AI ERP</span>
+                    </a>
+                    <p>Trợ lý AI điều hành doanh nghiệp – Kết nối dữ liệu ERP với quyết định thông minh.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Zalo"><i class="fas fa-comment-dots"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Sản phẩm</h4>
+                    <ul class="footer-links">
+                        <li><a href="#solution">Giải pháp</a></li>
+                        <li><a href="#features">Tính năng</a></li>
+                        <li><a href="#pricing">Bảng giá</a></li>
+                        <li><a href="#addon">Tiện ích bổ sung</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Hỗ trợ</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Hướng dẫn sử dụng</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="#">Liên hệ hỗ trợ</a></li>
+                        <li><a href="#">Tài liệu API</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Liên hệ</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:19001234"><i class="fas fa-phone"></i> 1900 1234</a></li>
+                        <li><a href="mailto:contact@aierp.vn"><i class="fas fa-envelope"></i> contact@aierp.vn</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> TP. Hồ Chí Minh</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 AI ERP. Tất cả quyền được bảo lưu.</p>
+                <div class="footer-legal">
+                    <a href="#">Điều khoản sử dụng</a>
+                    <a href="#">Chính sách bảo mật</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
