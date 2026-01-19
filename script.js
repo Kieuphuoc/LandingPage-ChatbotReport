@@ -5,6 +5,7 @@
 
 // ==================== DOM READY ====================
 document.addEventListener('DOMContentLoaded', () => {
+    initThemeToggle();
     initNavbar();
     initRoleTabs();
     initScrollAnimations();
@@ -13,6 +14,37 @@ document.addEventListener('DOMContentLoaded', () => {
     initLottieAnimations();
     initParallaxEffects();
 });
+
+// ==================== THEME TOGGLE ====================
+function initThemeToggle() {
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+
+    // Check for saved theme preference or default to light
+    const savedTheme = localStorage.getItem('theme') || 'light';
+
+    // Apply saved theme (light is default, no data-theme needed)
+    if (savedTheme === 'dark') {
+        html.setAttribute('data-theme', 'dark');
+    } else {
+        html.removeAttribute('data-theme');
+    }
+
+    // Toggle theme on button click
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+
+            if (currentTheme === 'dark') {
+                html.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    }
+}
 
 // ==================== NAVBAR SCROLL EFFECT ====================
 function initNavbar() {
@@ -58,7 +90,7 @@ function initRoleTabs() {
                 content.classList.remove('active');
                 if (content.id === role) {
                     content.classList.add('active');
-                    
+
                     // Re-trigger animations for new content
                     const cards = content.querySelectorAll('.role-feature-card');
                     cards.forEach((card, index) => {
@@ -88,7 +120,7 @@ function initScrollAnimations() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animated');
-                
+
                 // Add stagger effect for grid items
                 if (entry.target.parentElement) {
                     const siblings = entry.target.parentElement.querySelectorAll('.animate-on-scroll');
@@ -108,10 +140,10 @@ function initScrollAnimations() {
 // ==================== SMOOTH SCROLL ====================
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
-            
+
             if (target) {
                 const navbarHeight = document.getElementById('navbar').offsetHeight;
                 const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
@@ -159,7 +191,7 @@ function initLottieAnimations() {
     if (heroLottie) {
         // Use a working Lottie animation URL
         heroLottie.src = 'https://lottie.host/e7b97fcd-2d81-4c93-8fc0-4d1b3b51d5e5/X8pEMPQW3u.json';
-        
+
         // Fallback animation if main fails
         heroLottie.addEventListener('error', () => {
             heroLottie.src = 'https://assets10.lottiefiles.com/packages/lf20_fcfjwiyb.json';
@@ -170,7 +202,7 @@ function initLottieAnimations() {
     const solutionLottie = document.getElementById('solutionLottie');
     if (solutionLottie) {
         solutionLottie.src = 'https://lottie.host/0c34f2b4-d8bf-48e4-bc67-0f3cc5d14f45/0QLvhBXb6A.json';
-        
+
         // Fallback
         solutionLottie.addEventListener('error', () => {
             solutionLottie.src = 'https://assets5.lottiefiles.com/packages/lf20_kuiikza1.json';
@@ -236,31 +268,31 @@ if (heroStats) {
 
 // ==================== PRICING CARD HOVER EFFECTS ====================
 document.querySelectorAll('.pricing-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
         // Add glow effect
         this.style.boxShadow = '0 0 40px rgba(79, 70, 229, 0.3)';
     });
 
-    card.addEventListener('mouseleave', function() {
+    card.addEventListener('mouseleave', function () {
         this.style.boxShadow = '';
     });
 });
 
 // ==================== BUTTON RIPPLE EFFECT ====================
 document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('click', function(e) {
+    btn.addEventListener('click', function (e) {
         const ripple = document.createElement('span');
         ripple.classList.add('ripple');
-        
+
         const rect = this.getBoundingClientRect();
         const size = Math.max(rect.width, rect.height);
-        
+
         ripple.style.width = ripple.style.height = `${size}px`;
         ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
         ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
-        
+
         this.appendChild(ripple);
-        
+
         setTimeout(() => ripple.remove(), 600);
     });
 });
@@ -293,7 +325,7 @@ document.head.appendChild(rippleStyle);
 function typeWriter(element, text, speed = 50) {
     let i = 0;
     element.innerHTML = '';
-    
+
     function type() {
         if (i < text.length) {
             element.innerHTML += text.charAt(i);
@@ -301,7 +333,7 @@ function typeWriter(element, text, speed = 50) {
             setTimeout(type, speed);
         }
     }
-    
+
     type();
 }
 
@@ -316,12 +348,17 @@ mobileStyles.textContent = `
             top: 100%;
             left: 0;
             right: 0;
-            background: rgba(10, 10, 27, 0.98);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(20px);
             padding: 20px;
             gap: 16px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(79, 70, 229, 0.1);
             animation: slideDown 0.3s ease;
+        }
+        
+        [data-theme="dark"] .navbar.mobile-open .nav-menu {
+            background: rgba(10, 10, 27, 0.98);
+            border-bottom-color: rgba(255, 255, 255, 0.1);
         }
         
         .navbar.mobile-open .nav-cta {
@@ -331,11 +368,16 @@ mobileStyles.textContent = `
             top: calc(100% + 160px);
             left: 0;
             right: 0;
-            background: rgba(10, 10, 27, 0.98);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(20px);
             padding: 20px;
             gap: 12px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(79, 70, 229, 0.1);
+        }
+        
+        [data-theme="dark"] .navbar.mobile-open .nav-cta {
+            background: rgba(10, 10, 27, 0.98);
+            border-bottom-color: rgba(255, 255, 255, 0.1);
         }
         
         .mobile-toggle.active span:nth-child(1) {
@@ -385,13 +427,13 @@ if ('IntersectionObserver' in window) {
 // ==================== LOADING SCREEN ====================
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
-    
+
     // Animate hero elements after load
     const heroElements = document.querySelectorAll('.hero-badge, .hero-title, .hero-subtitle, .hero-cta, .hero-stats');
     heroElements.forEach((el, index) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
-        
+
         setTimeout(() => {
             el.style.transition = 'all 0.6s ease';
             el.style.opacity = '1';
