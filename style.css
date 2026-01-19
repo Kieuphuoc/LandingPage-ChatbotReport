@@ -1484,7 +1484,7 @@ p {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--bg-section);
+    background: var(--gray-100);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -1496,68 +1496,13 @@ p {
     background: var(--gray-400);
 }
 
-[data-theme="dark"]::-webkit-scrollbar-track {
-    background: var(--dark-900);
-}
-
-[data-theme="dark"]::-webkit-scrollbar-thumb {
-    background: var(--dark-600);
-}
-
-[data-theme="dark"]::-webkit-scrollbar-thumb:hover {
-    background: var(--dark-700);
-}
-
 /* ===== SELECTION ===== */
 ::selection {
     background: rgba(79, 70, 229, 0.2);
-    color: var(--text-primary);
+    color: var(--gray-900);
 }
 
-[data-theme="dark"] ::selection {
-    background: rgba(79, 70, 229, 0.4);
-}
-
-/* ===== THEME TOGGLE BUTTON ===== */
-.theme-toggle {
-    width: 44px;
-    height: 44px;
-    border-radius: var(--radius-md);
-    background: var(--bg-card);
-    border: 1px solid var(--card-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all var(--transition-normal);
-    color: var(--text-secondary);
-    font-size: 1.125rem;
-}
-
-.theme-toggle:hover {
-    background: var(--primary-gradient-soft);
-    border-color: var(--primary-blue);
-    color: var(--primary-blue);
-    transform: rotate(15deg);
-}
-
-.theme-toggle .fa-sun {
-    display: none;
-}
-
-.theme-toggle .fa-moon {
-    display: block;
-}
-
-[data-theme="dark"] .theme-toggle .fa-sun {
-    display: block;
-}
-
-[data-theme="dark"] .theme-toggle .fa-moon {
-    display: none;
-}
-
-/* ===== LIGHT MODE COMPONENT OVERRIDES ===== */
+/* ===== COMPONENT STYLES ===== */
 
 /* Navbar Light Mode */
 .navbar {

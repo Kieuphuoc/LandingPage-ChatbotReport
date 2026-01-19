@@ -5,7 +5,6 @@
 
 // ==================== DOM READY ====================
 document.addEventListener('DOMContentLoaded', () => {
-    initThemeToggle();
     initNavbar();
     initRoleTabs();
     initScrollAnimations();
@@ -14,37 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initLottieAnimations();
     initParallaxEffects();
 });
-
-// ==================== THEME TOGGLE ====================
-function initThemeToggle() {
-    const themeToggle = document.getElementById('themeToggle');
-    const html = document.documentElement;
-
-    // Check for saved theme preference or default to light
-    const savedTheme = localStorage.getItem('theme') || 'light';
-
-    // Apply saved theme (light is default, no data-theme needed)
-    if (savedTheme === 'dark') {
-        html.setAttribute('data-theme', 'dark');
-    } else {
-        html.removeAttribute('data-theme');
-    }
-
-    // Toggle theme on button click
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = html.getAttribute('data-theme');
-
-            if (currentTheme === 'dark') {
-                html.removeAttribute('data-theme');
-                localStorage.setItem('theme', 'light');
-            } else {
-                html.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-            }
-        });
-    }
-}
 
 // ==================== NAVBAR SCROLL EFFECT ====================
 function initNavbar() {
