@@ -324,11 +324,6 @@ mobileStyles.textContent = `
             animation: slideDown 0.3s ease;
         }
         
-        [data-theme="dark"] .navbar.mobile-open .nav-menu {
-            background: rgba(10, 10, 27, 0.98);
-            border-bottom-color: rgba(255, 255, 255, 0.1);
-        }
-        
         .navbar.mobile-open .nav-cta {
             display: flex;
             flex-direction: column;
@@ -341,11 +336,6 @@ mobileStyles.textContent = `
             padding: 20px;
             gap: 12px;
             border-bottom: 1px solid rgba(79, 70, 229, 0.1);
-        }
-        
-        [data-theme="dark"] .navbar.mobile-open .nav-cta {
-            background: rgba(10, 10, 27, 0.98);
-            border-bottom-color: rgba(255, 255, 255, 0.1);
         }
         
         .mobile-toggle.active span:nth-child(1) {
